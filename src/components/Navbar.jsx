@@ -1,18 +1,17 @@
-import logo from "../assets/paw-solid.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   return (
     <div className={props.show ? "side-nav active" : "side-nav"}>
-      <img src={logo} alt="paw" className="logo" />
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/">Contact</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="/">About</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </div>

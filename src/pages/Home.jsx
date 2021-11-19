@@ -1,7 +1,5 @@
-import { GiDiceFire } from "react-icons/gi";
-
-const Home = () => {
-  return <div></div>;
+const Home = (props) => {
+  return <div>Home</div>;
 };
 
 export default Home;
