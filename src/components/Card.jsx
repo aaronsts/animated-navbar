@@ -1,7 +1,7 @@
 // Assets
 const Card = (props) => {
   return (
-    <div className={`card ${props.index % 2 && "card-inverted"}`}>
+    <div className={props.index % 2 ? "card card-inverted" : "card"}>
       <div className="text-card">
         <div>
           <h2>{props.content.title}</h2>

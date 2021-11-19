@@ -1,7 +1,11 @@
 import "./App.css";
-import { useState } from "react";
+
 import { Routes, Route } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+
+// Hooks
+import { useState } from "react";
+import { useEffect } from "react";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -14,9 +18,26 @@ import Contact from "./pages/Contact";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
+  const [navbarColor, setNavbarColor] = useState();
+
+  // navbar scroll changeBackground function
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 100) {
+      setNavbarColor(true);
+    } else {
+      setNavbarColor(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change Logo
+    window.addEventListener("scroll", changeBackground);
+  });
   return (
     <>
-      <header>
+      <header className={navbarColor ? "scrolled" : ""}>
         <h1>Futurism</h1>
         {/* <GiHamburgerMenu onClick={() => setShowNav(!showNav)} /> */}
       </header>
