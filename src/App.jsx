@@ -20,7 +20,7 @@ function App() {
         <h1>Futurism</h1>
         {/* <GiHamburgerMenu onClick={() => setShowNav(!showNav)} /> */}
       </header>
-      <Navbar show={showNav} />
+      {/* <Navbar show={showNav} /> */}
       <div className="main">
         <Routes>
           <Route path="/" exact={true} element={<Home />} />
