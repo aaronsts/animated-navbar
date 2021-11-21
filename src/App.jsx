@@ -1,8 +1,6 @@
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-
 // Hooks
 import { useState } from "react";
 import { useEffect } from "react";
@@ -22,7 +20,7 @@ function App() {
 
   // navbar scroll changeBackground function
   const changeBackground = () => {
-    // console.log((window.scrollY % 100) / 100);
+    // console.log(window.scrollY % 500);
     if (window.scrollY < 500) {
       setNavbarColor(window.scrollY % 500);
     } else {
@@ -42,11 +40,10 @@ function App() {
   return (
     <>
       <header style={style}>
-        <h1>Futurism</h1>
-        {/* <GiHamburgerMenu onClick={() => setShowNav(!showNav)} /> */}
+        <h1 onClick={() => setShowNav(!showNav)}>Futurism</h1>
       </header>
-      {/* <Navbar show={showNav} /> */}
       <div className="main">
+        <Navbar show={showNav} />
         <Routes>
           <Route path="/" exact={true} element={<Home />} />
           <Route path="/about" exact={true} element={<About />} />

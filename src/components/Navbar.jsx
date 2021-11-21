@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Navbar = (props) => {
+  const [navPosition, setNavPosition] = useState(0);
+
+  const changeTopPosition = () => {
+    setNavPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    changeTopPosition();
+
+    window.addEventListener("scroll", changeTopPosition);
+  });
+
   return (
     <div className={props.show ? "side-nav active" : "side-nav"}>
       <ul>
