@@ -39,7 +39,7 @@ header h1 {
 }
 
 .scrolled {
-  background-color: #0a161f;
+  background-color: hsl(206, 51%, 8%);
   color: #f8f8f8;
   transition: all 1s ease-in-out;
 }

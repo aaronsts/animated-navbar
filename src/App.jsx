@@ -18,26 +18,30 @@ import Contact from "./pages/Contact";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
-  const [navbarColor, setNavbarColor] = useState();
+  const [navbarColor, setNavbarColor] = useState(0);
 
   // navbar scroll changeBackground function
   const changeBackground = () => {
-    console.log(window.scrollY);
-    if (window.scrollY >= 100) {
-      setNavbarColor(true);
+    // console.log((window.scrollY % 100) / 100);
+    if (window.scrollY < 500) {
+      setNavbarColor(window.scrollY % 500);
     } else {
-      setNavbarColor(false);
+      setNavbarColor(100);
     }
+  };
+  const style = {
+    backgroundColor: `hsl(353, 51%,${100 - navbarColor}%)`,
+    color: `hsl(353, 51%,${navbarColor}%)`,
   };
 
   useEffect(() => {
     changeBackground();
     // adding the event when scroll change Logo
     window.addEventListener("scroll", changeBackground);
-  });
+  }, []);
   return (
     <>
-      <header className={navbarColor ? "scrolled" : ""}>
+      <header style={style}>
         <h1>Futurism</h1>
         {/* <GiHamburgerMenu onClick={() => setShowNav(!showNav)} /> */}
       </header>

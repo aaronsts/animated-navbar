@@ -30,7 +30,7 @@ const Home = (props) => {
       <div className="banner">
         <img src={banner} alt="abstract image" id="banner-image" />
       </div>
-      <div className="content">
+      <div class="content">
         {cardContent.map((content, index) => {
           return <Card content={content} key={index} index={index} />;
         })}
