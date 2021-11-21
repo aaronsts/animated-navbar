@@ -44,11 +44,12 @@ function App() {
       </header>
       <div className="main">
         <Navbar show={showNav} />
-        <Routes>
+        <Home />
+        {/* <Routes>
           <Route path="/" exact={true} element={<Home />} />
           <Route path="/about" exact={true} element={<About />} />
           <Route path="/contact" exact={true} element={<Contact />} />
-        </Routes>
+        </Routes> */}
       </div>
       <Footer />
     </>
