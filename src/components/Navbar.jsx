@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -19,13 +18,10 @@ const Navbar = (props) => {
     <div className={props.show ? "side-nav active" : "side-nav"}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <a href="#home">Home</a>
         </li>
         <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <a href="#about">About</a>
         </li>
       </ul>
     </div>

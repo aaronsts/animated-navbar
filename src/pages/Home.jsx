@@ -26,7 +26,7 @@ const Home = (props) => {
     },
   ]);
   return (
-    <div className="home-container">
+    <div className="home-container" id="home">
       <div className="banner">
         <img src={banner} alt="abstract image" id="banner-image" />
       </div>

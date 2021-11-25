@@ -14,10 +14,12 @@ body {
 }
 
 .main {
-  width: 100%;
+  width: 100vw;
   min-height: 90vh;
 
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 header {
@@ -93,6 +95,28 @@ header h1 {
 
 .side-nav a:hover {
   color: hsl(353, 74%, 56%);
+}
+
+/* About Section */
+
+.about-container {
+  background-color: #e23e50;
+  height: 100vh;
+  padding: 2rem 4rem;
+}
+
+.about-container h3 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  line-height: 100%;
+}
+
+hr {
+  width: 30%;
+  color: #0a161f;
 }
 
 /* Footer styling */

@@ -27,6 +27,7 @@ function App() {
       setNavbarColor(100);
     }
   };
+
   const style = {
     backgroundColor: `hsl(353, 51%,${100 - navbarColor}%)`,
     color: `hsl(353, 51%,${navbarColor}%)`,
@@ -45,11 +46,7 @@ function App() {
       <div className="main">
         <Navbar show={showNav} />
         <Home />
-        {/* <Routes>
-          <Route path="/" exact={true} element={<Home />} />
-          <Route path="/about" exact={true} element={<About />} />
-          <Route path="/contact" exact={true} element={<Contact />} />
-        </Routes> */}
+        <About />
       </div>
       <Footer />
     </>
