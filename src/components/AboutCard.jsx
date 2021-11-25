@@ -2,13 +2,13 @@ import { IconContext } from "react-icons";
 
 const AboutCard = ({ icon, text }) => {
   return (
-    <IconContext.Provider value={{ size: "4rem" }}>
-      <div>
+    <div>
+      <IconContext.Provider value={{ size: "4rem" }}>
         {icon}
         <h2>Lorem Ipsum</h2>
         <p>{text}</p>
-      </div>
-    </IconContext.Provider>
+      </IconContext.Provider>
+    </div>
   );
 };
 
