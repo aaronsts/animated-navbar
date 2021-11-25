@@ -1,8 +1,14 @@
-const AboutCard = () => {
+import { IconContext } from "react-icons";
+
+const AboutCard = ({ icon, text }) => {
   return (
-    <div>
-      <h2>Lorem Ipsum</h2>
-    </div>
+    <IconContext.Provider value={{ size: "4rem" }}>
+      <div>
+        {icon}
+        <h2>Lorem Ipsum</h2>
+        <p>{text}</p>
+      </div>
+    </IconContext.Provider>
   );
 };
 
