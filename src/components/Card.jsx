@@ -3,8 +3,13 @@ import Fade from "react-reveal/Fade";
 
 // Assets
 const Card = (props) => {
+  let even = true;
+  if (props.index % 2) {
+    even = false;
+  }
+
   return (
-    <Fade left mirror={props.index % 2} cascade duration={2000}>
+    <Fade left mirror={even} cascade duration={2000}>
       <div className={props.index % 2 ? "card card-inverted" : "card"}>
         <div className="text-card">
           <div>
