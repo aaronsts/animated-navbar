@@ -10,8 +10,6 @@ const About = () => {
     <div className="about-container" id="about">
       <Slide left duration={2000}>
         <h3>About</h3>
-        <hr />
-
         <div className="about-content">
           <AboutCard
             icon={<RiBuilding2Fill />}
