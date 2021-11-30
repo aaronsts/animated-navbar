@@ -8,7 +8,7 @@ import Slide from "react-reveal/Slide";
 const About = () => {
   return (
     <div className="about-container" id="about">
-      <Slide top duration={2000}>
+      <Slide left duration={2000}>
         <h3>About</h3>
         <hr />
 

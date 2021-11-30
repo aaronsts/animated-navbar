@@ -1,0 +1,17 @@
+.banner {
+  height: 94vh;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+#banner-image {
+  display: block;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 0 4rem;
+}

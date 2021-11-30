@@ -15,38 +15,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [showNav, setShowNav] = useState(false);
-  const [navbarColor, setNavbarColor] = useState(0);
-
-  // navbar scroll changeBackground function
-  const changeBackground = () => {
-    // console.log(window.scrollY % 500);
-    if (window.scrollY < 500) {
-      setNavbarColor(window.scrollY % 500);
-    } else {
-      setNavbarColor(100);
-    }
-  };
-
-  const style = {
-    backgroundColor: `hsl(353, 51%,${100 - navbarColor}%)`,
-    color: `hsl(353, 51%,${navbarColor}%)`,
-  };
-
-  useEffect(() => {
-    changeBackground();
-    // adding the event when scroll change Logo
-    window.addEventListener("scroll", changeBackground);
-  }, []);
   return (
     <>
-      <header style={style}>
-        <h1 onClick={() => setShowNav(!showNav)}>Futurism</h1>
-      </header>
+      <Navbar />
       <div className="main">
-        <Navbar show={showNav} />
         <Home />
         <About />
+        <Contact />
       </div>
       <Footer />
     </>

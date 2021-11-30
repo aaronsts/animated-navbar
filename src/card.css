@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.card-inverted {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.card-inverted .text-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.text-card {
+  width: 60%;
+  font-family: "Inter", sans-serif;
+  /* padding-right: 2rem; */
+}
+
+.text-card div {
+  max-width: 300px;
+  width: 50%;
+
+  text-align: center;
+  padding: 1rem 4rem;
+
+  background-color: #25d9da;
+  color: #f8f8f8;
+
+  box-shadow: 0px 0px 30px 5px rgba(17, 11, 11, 0.05);
+}
+
+.text-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 2px 2px hsl(353, 74%, 56%);
+}
+
+.text-card p {
+  font-size: 1.4rem;
+  font-weight: medium;
+
+  margin-top: 3rem;
+}
+
+.image-card {
+  max-width: 40%;
+  height: 500px;
+
+  /* margin: 0 auto; */
+
+  box-shadow: 0px 0px 30px 5px rgba(17, 11, 11, 0.05);
+  filter: drop-shadow(-5px 0px 0px hsl(180, 71%, 50%))
+    drop-shadow(-8px 0px 0px hsl(353, 74%, 56%));
+}
